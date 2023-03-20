@@ -1,0 +1,127 @@
+@layer base {
+    @font-face {
+        font-family: 'Poppins-900';
+        src: url('/fonts/Poppins-Black.woff2') format('woff2');
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-900-Italic';
+        src: url('/fonts/Poppins-Black-Italic.woff2') format('woff2');
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Poppins-800';
+        src: url('/fonts/Poppins-ExtraBold.woff2') format('woff2');
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-800-Italic';
+        src: url('/fonts/Poppins-ExtraBold-Italic.woff2') format('woff2');
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Poppins-700';
+        src: url('/fonts/Poppins-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-700-Italic';
+        src: url('/fonts/Poppins-Bold-Italic.woff2') format('woff2');
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Poppins-600';
+        src: url('/fonts/Poppins-SemiBold.woff2') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-600-Italic';
+        src: url('/fonts/Poppins-SemiBold-Italic.woff2') format('woff2');
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Poppins-500';
+        src: url('/fonts/Poppins-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-500-Italic';
+        src: url('/fonts/Poppins-Medium-Italic.woff2') format('woff2');
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Poppins-400';
+        src: url('/fonts/Poppins-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-400-Italic';
+        src: url('/fonts/Poppins-Italic.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Poppins-300';
+        src: url('/fonts/Poppins-Light.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-300-Italic';
+        src: url('/fonts/Poppins-Light-Italic.woff2') format('woff2');
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Poppins-200';
+        src: url('/fonts/Poppins-ExtraLight.woff2') format('woff2');
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-200-Italic';
+        src: url('/fonts/Poppins-ExtraLight-Italic.woff2') format('woff2');
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'Poppins-100';
+        src: url('/fonts/Poppins-Thin.woff2') format('woff2');
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Poppins-100-Italic';
+        src: url('/fonts/Poppins-Thin-Italic.woff2') format('woff2');
+        font-weight: 100;
+        font-style: italic;
+    }
+}
