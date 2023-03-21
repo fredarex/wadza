@@ -77,28 +77,29 @@ const Rankings = () => {
   }
 
   return (
-    <section className='flex flex-col items-center mt-[136px]'>
+    <section className='flex flex-col items-center mt-[50px] ms:mt-[136px]'>
       {/* header */}
-      <div className='flex flex-col max-w-[1250px] w-full'>
+      <div className='flex flex-col max-w-[1250px]  w-full'>
         {/* title */}
-        <div className='flex flex-row justify-center items-center max-w-[357px] w-full bg-[#DFDBE4] px-13 py-8 rounded-t-[15px]'>
+        <div className='flex flex-row justify-center items-center max-w-[357px] w-full sm:bg-[#DFDBE4] px-13 py-8 rounded-t-[15px]'>
           <span className='font-poppins-700 text-3xl text-black-lighter'>
             <FormattedMessage id='page.rankings.title' />
           </span>
         </div>
         {/* nabvar */}
-        <div className='flex flex-row justify-between items-center w-full h-11 bg-purple-lightest rounded-[0_15px_4px_4px] pl-[50px] pr-[10px]'>
+        <div className='-sm:flex-col flex flex-row justify-between items-center  w-full sm:h-11 sm:bg-purple-lightest rounded-[0_15px_4px_4px] pl-[50px] pr-[20px]'>
           {/* tabs */}
-          <div className='flex flex-row items-center h-full'>
-            <TabItem className='mr-[60px] text-black' onClick={() => selectTab('top')} selected={tab === 'top'} category={{ label: intl.formatMessage({ 'id': 'page.explore_collections.tabs.top' }), value: 'top' }} />
-            <TabItem className='mr-[60px] text-black' onClick={() => selectTab('trending')} selected={tab === 'trending'} category={{ label: intl.formatMessage({ 'id': 'page.home.featured.tabs.section.label.trending' }), value: 'trending' }} />
-            <TabItem className='text-black' onClick={() => selectTab('watchlist')} selected={tab === 'watchlist'} category={{ label: intl.formatMessage({ 'id': 'page.home.footer.section.label.watchlist' }), value: 'watchlist' }} />
+          <div className='flex flex-row items-center -sm:mb-5 h-full  border-b shadow-sm'>
+            <TabItem className='mr-[60px] text-black -sm:pb-3' onClick={() => selectTab('top')} selected={tab === 'top'} category={{ label: intl.formatMessage({ 'id': 'page.explore_collections.tabs.top' }), value: 'top' }} />
+            <TabItem className='mr-[60px] text-black -sm:pb-3' onClick={() => selectTab('trending')} selected={tab === 'trending'} category={{ label: intl.formatMessage({ 'id': 'page.home.featured.tabs.section.label.trending' }), value: 'trending' }} />
+            <TabItem className='text-black -sm:pb-3' onClick={() => selectTab('watchlist')} selected={tab === 'watchlist'} category={{ label: intl.formatMessage({ 'id': 'page.home.footer.section.label.watchlist' }), value: 'watchlist' }} />
           </div>
           {/* sorting */}
-          <div className='flex flex-row items-center'>
-            {['top', 'trending'].includes(tab) && <Menu as={'div'} className='relative inline-block'>
+          <div className='-sm:flex-col flex flex-row -sm:w-full items-center'>
+            {['top', 'trending'].includes(tab) && 
+            <Menu as={'div'} className=' -sm:mb-5 -sm:w-full -sm:rounded  sm:inline-block'>
               <div>
-                <Menu.Button className='flex justify-between items-center w-[154px] h-[27px] bg-white pl-3 pr-[10.75px] mr-2 rounded'>
+                <Menu.Button className='flex justify-between items-center -sm:w-full w-[154px] -sm:h-[40px] h-[27px] bg-white pl-3 pr-[10.75px] mr-2 -md:rounded-2xl'>
                   <span className='font-poppins-400 text-xs text-black-lighter leading-[98.3%]'>
                     {category.label}
                   </span>
@@ -114,7 +115,7 @@ const Rankings = () => {
                 leaveFrom='transform opacity-100 scale-100'
                 leaveTo='transform opacity-0 scale-95'
               >
-                <Menu.Items className='absolute z-[2] left-0 mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
+                <Menu.Items className='absolute z-[2]  sm:left-0 mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
                   <div className="p-3">
                     <Menu.Item>
                       <button
@@ -141,10 +142,10 @@ const Rankings = () => {
                 </Menu.Items>
               </Transition>
             </Menu>}
-            {['top', 'watchlist'].includes(tab) && <div className='flex flex-row items-center h-[27px] bg-white rounded-[4px_10px_4px_4px]'>
+            {['top', 'watchlist'].includes(tab) && <div className='flex -sm:mb-4  flex-row  -sm:rounded-2xl -sm:w-full  items-center -sm:h-[40px]   h-[27px] bg-white rounded-[4px_10px_4px_4px]'>
               {TIME_RANGES.length > 0 && TIME_RANGES.map((time: ITab, index: number) => (
-                <div key={index} onClick={() => handleTimeRange(time.slug as TimeRangeType)} className={`flex flex-row justify-center items-center w-9 h-full cursor-pointer ${timeRange === time.slug? 'bg-[#F7F2FE]' : ''} `}>
-                  <h5 className='font-poppins-400 text-black text-xs leading-[98.3%]'>
+                <div key={index} onClick={() => handleTimeRange(time.slug as TimeRangeType)} className={`-sm:mx-auto flex flex-row justify-center items-center w-9 h-full cursor-pointer ${timeRange === time.slug? 'bg-[#F7F2FE] -sm:bg-[#52307C] ' : ''} `}>
+                  <h5 className={`font-poppins-400 text-black text-xs leading-[98.3%] ${timeRange === time.slug? '-sm:text-white ' : ''}`}>
                     {time.name}
                   </h5>
                 </div>
@@ -154,6 +155,7 @@ const Rankings = () => {
         </div>
       </div>
       {/* body */}
+      
       {tab === 'top' && <TopRankings category={category.value} timeRange={timeRange} />}
       {tab === 'trending' && <TrendingRankings category={category.value} />}
       {tab === 'watchlist' && <Watchlist timeRange={timeRange} />}

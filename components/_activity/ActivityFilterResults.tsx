@@ -6,7 +6,6 @@ import { ICommonProps } from '../../types/types'
 import { getCryptoPrice } from '../../utils/utils'
 import ActivityCard from './ActivityCard'
 import ActivityCardAnimation from './ActivityCardAnimation'
-
 interface IProps extends ICommonProps {
   
 }
@@ -91,8 +90,8 @@ const ActivityFilterResults = (props: IProps) => {
   }, [onFilterSidebar])
 
   return (
-    <div className={`${className} ${_width} bg-purple-lightest min-h-[calc(100vh-200px)] px-6 pb-[17px] overflow-y-auto rounded`}>
-      <div className='flex justify-between items-center w-full h-[52px] px-6 mb-[17px] border-b-2 border-solid border-[#DDD7E5] font-poppins-400 text-xs text-black leading-[98.3%]'>
+    <div className={`${className} ${_width} sm:g-purple-lightest min-h-[calc(100vh-200px)] px-6 pb-[17px] overflow-y-auto rounded`}>
+      <div className='-sm:hidden flex justify-between items-center w-full h-[52px] px-6 mb-[17px] border-b-2 border-solid border-[#DDD7E5] font-poppins-400 text-xs text-black leading-[98.3%]'>
         <div className='flex flex-row w-[12%] items-center'>
         </div>
         <div className='flex flex-row w-[26%] items-center'>

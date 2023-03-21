@@ -87,6 +87,9 @@ html {
 .blogSwiper {
   width: 100vw;
 }
+.bg-light-style {
+  background-color: #FAFAFA;
+}
 
 .swiper-pagination-bullet {
   width: 12px !important;

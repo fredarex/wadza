@@ -138,11 +138,11 @@ const TopRankings = (props: IProps) => {
   return (
     <div className='flex flex-col max-w-[1250px] w-full mt-2'>
       {/* header */}
-      <div className='flex flex-row items-center w-full h-[45px] rounded-t bg-[#DDD7E7] font-poppins-400 text-[13px] text-black leading-[98.3%] pl-[49px]'>
-        <div className=' w-4/12'>
+      <div className='flex flex-row items-center w-full h-[45px] rounded-t ms:bg-[#DDD7E7] font-poppins-400 text-[13px] text-black leading-[98.3%] pl-[49px]'>
+        <div className='-sm:w-[80%] w-4/12'>
           <FormattedMessage id='page.home.featured.tabs.section.label.collection' />
         </div>
-        <div className={`flex flex-row items-center w-2/12 cursor-pointer ${sortBy.volume? 'text-black' : 'text-[#878787]'}`} onClick={() => sortByVolume()}>          
+        <div className={` flex flex-row items-center -sm:w-[20%] w-2/12 cursor-pointer ${sortBy.volume? 'text-black' : 'text-[#878787]'}`} onClick={() => sortByVolume()}>          
           <FormattedMessage id='page.home.featured.tabs.section.label.volume' />
           {sortBy.volume? <span className='ml-2'>
             {volumeSort? <ArrowDownSvgIcon color='#424242' width={10} height={6} /> : <ArrowUpSvgIcon color='#424242' width={10} height={6} />}            
@@ -155,7 +155,7 @@ const TopRankings = (props: IProps) => {
             </span>
           </div>}
         </div>
-        <div className={`flex flex-row items-center w-2/12 cursor-pointer ${sortBy.change? 'text-black' : 'text-[#878787]'}`} onClick={() => sortByChange()}>
+        <div className={`-sm:hidden flex flex-row items-center w-2/12 cursor-pointer ${sortBy.change? 'text-black' : 'text-[#878787]'}`} onClick={() => sortByChange()}>
           <span className='mr-1'>
             %
           </span>
@@ -171,7 +171,7 @@ const TopRankings = (props: IProps) => {
             </span>
           </div>}
         </div>
-        <div className={`flex flex-row items-center w-2/12 cursor-pointer ${sortBy.floorPrice? 'text-black' : 'text-[#878787]'}`} onClick={() => sortByFloorPrice()}>
+        <div className={`-sm:hidden flex flex-row items-center w-2/12 cursor-pointer ${sortBy.floorPrice? 'text-black' : 'text-[#878787]'}`} onClick={() => sortByFloorPrice()}>
           <FormattedMessage id='page.nft_detail.modal.offer.label.floor_price' />
           {sortBy.floorPrice? <span className='ml-2'>
             {floorPriceSort? <ArrowDownSvgIcon color='#424242' width={10} height={6} /> : <ArrowUpSvgIcon color='#424242' width={10} height={6} />}            
@@ -184,7 +184,7 @@ const TopRankings = (props: IProps) => {
             </span>
           </div>}
         </div>
-        <div className={`flex flex-row items-center w-2/12 cursor-pointer ${sortBy.sales? 'text-black' : 'text-[#878787]'}`} onClick={() => sortBySales()}>
+        <div className={`-sm:hidden flex flex-row items-center w-2/12 cursor-pointer ${sortBy.sales? 'text-black' : 'text-[#878787]'}`} onClick={() => sortBySales()}>
           <FormattedMessage id='page.rankings.label.sales' />
           {sortBy.sales? <span className='ml-2'>
             {salesSort? <ArrowDownSvgIcon color='#424242' width={10} height={6} /> : <ArrowUpSvgIcon color='#424242' width={10} height={6} />}            
@@ -199,8 +199,8 @@ const TopRankings = (props: IProps) => {
         </div>
       </div>
       {/* body */}
-      <div className='w-full bg-[#E6E2EC] p-[0_10px_48px_24px] rounded-b-[15px]'>
-        {sortedCollections.length > 0 && !loading? collections.map((collection: IMockCollection, index: number) => (
+      <div className='w-full sm:bg-[#E6E2EC] p-[0_10px_48px_24px] rounded-b-[15px]'>
+        {sortedCollections.length > 0 && !loading? collections.slice(0, 7).map((collection: IMockCollection, index: number) => (
           <RankingCollectionCard
             key={index}
             collection={collection}
@@ -210,6 +210,7 @@ const TopRankings = (props: IProps) => {
             key={index}
           />
         ))}
+        <button></button>
       </div>
     </div>
   )

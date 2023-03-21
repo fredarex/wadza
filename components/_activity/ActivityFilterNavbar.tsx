@@ -24,9 +24,9 @@ const ActivityFilterNavbar = () => {
   }
 
   return (
-    <div className='max-w-[1250px] w-full bg-purple-lightest rounded-[15px_15px_4px_4px] p-[10px]'>
-      <div className='flex flex-row justify-between'>
-        <button onClick={() => setOnFilterSidebar(!onFilterSidebar)} className='flex flex-row justify-center items-center max-w-[86px] w-full h-[27px] bg-white hover:bg-slate-100 rounded-[10px_4px_4px_4px]'>
+    <div className=' max-w-[1250px] w-full sm:bg-purple-lightest rounded-[15px_15px_4px_4px] p-[10px]'>
+      <div className='flex flex-row  -sm:w-full justify-between'>
+        <button onClick={() => setOnFilterSidebar(!onFilterSidebar)} className='flex flex-row justify-center items-center -sm:rounded-2xl -sm:mx-3 sm:max-w-[86px] w-full -sm:h-[40px] h-[27px] bg-white hover:bg-slate-100 rounded-[10px_4px_4px_4px]'>
           <Image
             src={FilterIcon}
             alt='filter icon'
@@ -43,7 +43,7 @@ const ActivityFilterNavbar = () => {
             <FormattedMessage id='page.nft_detail.history.clear_all' />
           </h4>
           {eventTypes.map((eventType: IFilterOption, index: number) => (
-            <div key={index} className='flex flex-row items-center bg-white h-[27px] px-[9px] rounded ml-[6px]'>
+            <div key={index} className=' flex flex-row items-center bg-white h-[27px] px-[9px] rounded ml-[6px]'>
               <h5 className='font-poppins-400 text-xs text-black leading-[98.3%] mr-2'>
                 {eventType?.label || ''}
               </h5>
