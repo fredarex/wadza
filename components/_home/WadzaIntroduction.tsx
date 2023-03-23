@@ -20,10 +20,10 @@ const WadzaIntroduction = () => {
   }, [])
 
   return (
-    <div className='flex justify-center mt-[57px] sm:mt-[187px]'>
+    <div className='flex justify-center mt-[57px] sm:mt-[187px]  '>
       <div className='relative max-w-[1250px] w-full h-[954px] sm:h-[528px] bg-purple sm:rounded-[15px] shadow-sm'>
-        <div className='absolute top-[-14px] sm:top-[-71px] left-[25px] sm:left-[42px] max-w-[340px] min-[391px]:max-w-[calc(100vw-50px)] sm:max-w-[1165px] w-full'>
-          <div className='flex-col'>
+        <div className=' absolute top-[-14px] sm:top-[-71px] left-[25px] sm:left-[42px] max-w-[340px] min-[391px]:max-w-[calc(100vw-50px)] sm:max-w-[1165px] w-full'>
+          <div className='flex-col  '>
             <div className='relative sm:flex max-w-[1165px] w-full h-[386px] sm:h-[217px] bg-[#53317D] rounded-[9px] shadow-sm'>
               <div className='flex-col pt-[38px] sm:pt-[44px] pl-7 sm:pl-[67px] max-w-[520px] w-full'>
                 <div className='flex font-poppins-400 text-[22px] sm:text-[33px] text-white leading-[104.3%] uppercase'>

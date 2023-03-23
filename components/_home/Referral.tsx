@@ -18,7 +18,7 @@ const Referral = () => {
           <div className='font-poppins-400 text-sm sm:text-xs text-white mt-[19px] sm:mt-2 leading-[21px] sm:leading-[18px]'>
             <FormattedMessage id='page.home.referral.program.section.description.2' />
           </div>
-          <button className='flex justify-center items-center max-w-[174px] sm:max-w-[169px] w-full h-[38px] sm:h-[29px] rounded-[19px] bg-[#512D72] sm:bg-white/[0.11] mt-[22px] sm:mt-5 hover:bg-white/[0.15] active:bg-white/[0.08] ease-in-out duration-100'>
+          <button className=' flex justify-center items-center max-w-[174px] sm:max-w-[169px] w-full h-[38px] sm:h-[29px] rounded-[19px] bg-[#512D72] sm:bg-white/[0.11] mt-[22px] sm:mt-5 hover:bg-white/[0.15] active:bg-white/[0.08] ease-in-out duration-100'>
             <div className='font-poppins-600 text-[15px] sm:text-xs text-white leading-[22px] sm:leading-[18px]'>
               <FormattedMessage id='page.home.referral.program.section.button.join' />
             </div>
